@@ -30,11 +30,10 @@ print(result)
 with open("file1.txt") as file1:
     data1 = file1.readlines()
 
-data1_mod = [int(num.strip("\n")) for num in data1]
 #print(data1_mod)
 with open("file2.txt") as file2:
     data2 = file2.readlines()
-data2_mod = [int(num.strip("\n")) for num in data2]
+
 #print(data2_mod)
-result = [num for num in data1_mod if num in data2_mod]
+result = [int(num) for num in data1 if num in data2]
 print(result)
