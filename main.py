@@ -24,3 +24,17 @@ print(squared_numbers)
 numbers = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 result = [num for num in numbers if num % 2 == 0]
 print(result)
+
+
+#common element between file
+with open("file1.txt") as file1:
+    data1 = file1.readlines()
+
+data1_mod = [int(num.strip("\n")) for num in data1]
+#print(data1_mod)
+with open("file2.txt") as file2:
+    data2 = file2.readlines()
+data2_mod = [int(num.strip("\n")) for num in data2]
+#print(data2_mod)
+result = [num for num in data1_mod if num in data2_mod]
+print(result)
